@@ -6,6 +6,11 @@ from .company import Company
 
 
 class User(Base, IdPkMixin):
+    def get_small_data(self):
+      a = super().get_small_data()
+      del a['password']
+      return a
+
     email = Column(String(50), nullable=False, unique=True)
     password = Column(String(100), nullable=False)
     first_name = Column(String(50), nullable=False)
