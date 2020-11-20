@@ -29,7 +29,7 @@ def register():
     user_infos["password"] = password
     user_infos["first_name"] = request.json["first_name"]
     user_infos["last_name"] = request.json["last_name"]
-    user_infos["phone"] = request.json["phone"]
+    # user_infos["phone"] = request.json["phone"]
 
     session = Session()
     try:
